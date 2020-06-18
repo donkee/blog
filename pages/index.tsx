@@ -1,17 +1,9 @@
 import Head from 'next/head';
-import StoryblokClient from 'storyblok-js-client';
-import useSWR from 'swr';
 import ReactMarkdown from 'react-markdown';
-
-export const api_key = process.env.NEXT_PUBLIC_STORYBLOK;
-
-export const Storyblok = new StoryblokClient({
-  accessToken: api_key,
-  cache: {
-    clear: 'auto',
-    type: 'memory'
-  }
-});
+import useSWR from 'swr';
+import { PostsTeaser } from '../components/PostsTeaser';
+import { Window } from '../components/Window';
+import { Storyblok } from '../storyblokClient';
 
 const Home = () => {
   const { data, error } = useSWR('home', story =>
@@ -28,8 +20,11 @@ const Home = () => {
       </Head>
 
       <main>
-        <h1 className="title">Welcome to my blog!</h1>
-        <ReactMarkdown source={data ? data.data.story.content.body : null} />
+        <Window title="Captain's Log" header="Welcome to my blog!" width={1000}>
+          <ReactMarkdown source={data ? data.data.story.content.body : null} />
+          <h4>Recent posts:</h4>
+          <PostsTeaser />
+        </Window>
       </main>
     </div>
   );
