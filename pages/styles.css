@@ -5,6 +5,8 @@
 /* font-family: 'Inter', sans-serif; */
 /* font-family: 'Roboto Slab', serif; */
 
+@tailwind components;
+
 h1,
 h2,
 h3,
@@ -14,6 +16,17 @@ h6 {
   font-family: 'Roboto Slab', serif;
 }
 
-@tailwind components;
+h1 {
+  @apply text-4xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+a {
+  @apply text-blue-600 underline;
+}
 
 @tailwind utilities;
