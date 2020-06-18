@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import useSWR from 'swr';
 import { PostsTeaser } from '../components/PostsTeaser';
@@ -14,11 +13,6 @@ const Home = () => {
 
   return (
     <div className="container">
-      <Head>
-        <title>Captain's Log</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
         <Window title="Captain's Log" header="Welcome to my blog!" width={1000}>
           <ReactMarkdown source={data ? data.data.story.content.body : null} />

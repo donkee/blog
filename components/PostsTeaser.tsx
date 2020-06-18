@@ -16,7 +16,7 @@ export const PostsTeaser = () => {
       <ul className={'tree-view'}>
         {data.data.stories.map(s => {
           return (
-            <li>
+            <li key={s.full_slug}>
               <Link href="/posts/[slug]" as={`/${s.full_slug}`}>
                 <a>{s.content.title}</a>
               </Link>

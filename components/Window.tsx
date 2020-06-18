@@ -11,18 +11,22 @@ export const Window: React.FC<{
   return (
     <div
       className="window"
-      style={{ margin: 'auto', width: width, transition: 'width 0.3s' }}>
+      style={{
+        margin: 'auto',
+        width: width,
+        transition: 'all 0.2s'
+      }}>
       <div className="title-bar">
         <div className="title-bar-text">{props.title}</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize"></button>
           <button
             aria-label="Maximize"
-            onClick={() =>
+            onClick={() => {
               setWidth(prevWidth =>
                 prevWidth === '100%' ? `${props.width}px` : '100%'
-              )
-            }></button>
+              );
+            }}></button>
           <Link href="/">
             <button aria-label="Close"></button>
           </Link>

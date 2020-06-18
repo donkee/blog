@@ -20,7 +20,8 @@
     "react-markdown": "^4.3.1",
     "react-syntax-highlighter": "^12.2.1",
     "storyblok-js-client": "^2.5.0",
-    "swr": "^0.2.3"
+    "swr": "^0.2.3",
+    "use-clippy-now": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.13",
