@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="container">
       <main>
-        <Window title="Captain's Log" header="Welcome to my blog!" width={1000}>
+        <Window title="Symantech" header="Welcome to my blog!" width={1000}>
           <ReactMarkdown source={data ? data.data.story.content.body : null} />
           <h4>Recent posts:</h4>
           <PostsTeaser />

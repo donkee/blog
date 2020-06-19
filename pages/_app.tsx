@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <div className="app">
       <Head>
-        <title>Captain's Log</title>
+        <title>Symantech</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />

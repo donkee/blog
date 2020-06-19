@@ -19,7 +19,7 @@ const Post = () => {
   return (
     <div className="container">
       <Head>
-        <title>{data.data.story.content.title} | Captain's Log</title>
+        <title>{data.data.story.content.title} | Symantech</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
