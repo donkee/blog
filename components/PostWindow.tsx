@@ -42,10 +42,10 @@ export const PostWindow: React.FC<{
       <div className="window-body">
         <div className="window-body-content">
           <h3>{props.data.data.story.content.header}</h3>
-          <div>
+          <h5 style={{ marginBottom: '16px' }}>
             {'Published on ' +
               format(new Date(props.data.data.story.published_at), 'PPPP')}
-          </div>
+          </h5>
           <ReactMarkdown
             source={props.data ? props.data.data.story.content.body : null}
             renderers={{ code: CodeBlock }}
