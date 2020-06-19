@@ -1,14 +1,10 @@
-import ReactGA from 'react-ga';
 import ReactMarkdown from 'react-markdown';
 import useSWR from 'swr';
-import { PostsTeaser } from '../components/PostsTeaser';
 import { Window } from '../components/Window';
 import { Storyblok } from '../storyblokClient';
 
-const Home = () => {
-  ReactGA.pageview('/');
-
-  const { data, error } = useSWR('home', story =>
+const About = () => {
+  const { data, error } = useSWR('about', story =>
     Storyblok.get(`cdn/stories/${story}`)
   );
   if (error) return <div>failed to load</div>;
@@ -17,14 +13,12 @@ const Home = () => {
   return (
     <div className="container">
       <main>
-        <Window title="Symantech" header="Welcome to my blog!" width={1000}>
+        <Window title="About Me" header="About Me">
           <ReactMarkdown source={data ? data.data.story.content.body : null} />
-          <h4>Recent posts:</h4>
-          <PostsTeaser />
         </Window>
       </main>
     </div>
   );
 };
 
-export default Home;
+export default About;

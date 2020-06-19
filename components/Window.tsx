@@ -19,14 +19,9 @@ export const Window: React.FC<{
       <div className="title-bar">
         <div className="title-bar-text">{props.title}</div>
         <div className="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button
-            aria-label="Maximize"
-            onClick={() => {
-              setWidth(prevWidth =>
-                prevWidth === '100%' ? `${props.width}px` : '100%'
-              );
-            }}></button>
+          <Link href="/about">
+            <button aria-label="Help"></button>
+          </Link>
           <Link href="/">
             <button aria-label="Close"></button>
           </Link>
