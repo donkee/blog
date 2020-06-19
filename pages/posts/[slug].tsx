@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import ReactGA from 'react-ga';
 import useSWR from 'swr';
 import { PostWindow } from '../../components/PostWindow';
 import { Storyblok } from '../../storyblokClient';
@@ -7,6 +8,8 @@ import { Storyblok } from '../../storyblokClient';
 const Post = () => {
   const router = useRouter();
   const { slug } = router.query;
+
+  ReactGA.pageview(`/${slug}`);
 
   const { data, error } = useSWR(slug, story =>
     Storyblok.get(`cdn/stories/posts/${story}`)

@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import ReactMarkdown from 'react-markdown';
 import useSWR from 'swr';
 import { PostsTeaser } from '../components/PostsTeaser';
@@ -5,6 +6,8 @@ import { Window } from '../components/Window';
 import { Storyblok } from '../storyblokClient';
 
 const Home = () => {
+  ReactGA.pageview('/');
+
   const { data, error } = useSWR('home', story =>
     Storyblok.get(`cdn/stories/${story}`)
   );
