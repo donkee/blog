@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NextSeo
-        title="Captain's Log"
+        title="Symantech"
         description="A blog dedicated to unique and challenging coding experiences."
       />
       <Component {...pageProps} />
