@@ -1,9 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import ReactMarkdown from 'react-markdown';
 import useSWR from 'swr';
-import { CodeBlock } from '../../components/CodeBlock';
-import { Window } from '../../components/Window';
+import { PostWindow } from '../../components/PostWindow';
 import { Storyblok } from '../../storyblokClient';
 
 const Post = () => {
@@ -23,14 +21,7 @@ const Post = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Window
-        title={data.data.story.content.title}
-        header={data.data.story.content.header}>
-        <ReactMarkdown
-          source={data ? data.data.story.content.body : null}
-          renderers={{ code: CodeBlock }}
-        />
-      </Window>
+      <PostWindow data={data} />
     </div>
   );
 };

@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "98.css": "^0.1.16",
+    "@types/date-fns": "^2.6.0",
     "@types/prismjs": "^1.16.1",
     "@types/react-syntax-highlighter": "^11.0.4",
+    "date-fns": "^2.14.0",
     "next": "9.4.4",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
