@@ -21,7 +21,8 @@ export const PostWindow: React.FC<{
       }}>
       <div className="title-bar">
         <div className="title-bar-text">
-          {props.data.data.story.content.title}
+          <img src={'/logo-16.png'} />
+          <div>{props.data.data.story.content.title}</div>
         </div>
         <div className="title-bar-controls">
           <Link href="/about">

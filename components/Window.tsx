@@ -17,7 +17,10 @@ export const Window: React.FC<{
         transition: 'all 0.2s'
       }}>
       <div className="title-bar">
-        <div className="title-bar-text">{props.title}</div>
+        <div className="title-bar-text">
+          <img src={'/logo-16.png'} />
+          <div>{props.title}</div>
+        </div>
         <div className="title-bar-controls">
           <Link href="/about">
             <button aria-label="Help"></button>

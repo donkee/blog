@@ -1,3 +1,12 @@
 body {
   background-color: #008080;
 }
+
+.title-bar-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-bar-text > img {
+  margin-right: 6px;
+}
